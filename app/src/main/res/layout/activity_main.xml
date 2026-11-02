@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no" />
+
+        <com.visionassistant.app.OverlayView
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#CC000000"
+            android:padding="10dp"
+            android:text="Starting..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <Button
+            android:id="@+id/btnListen"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:backgroundTint="#D81B60"
+            android:contentDescription="Speak a command. You can also hold volume down."
+            android:text="Speak a command"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRead"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1E88E5"
+                android:contentDescription="Read text in front of the camera"
+                android:text="Read text"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnDescribe"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:backgroundTint="#43A047"
+                android:contentDescription="Describe my surroundings"
+                android:text="Describe"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnWho"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:backgroundTint="#8E24AA"
+                android:contentDescription="Who is in front of me"
+                android:text="Who is this"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnRemember"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F4511E"
+                android:contentDescription="Remember a face"
+                android:text="Remember face"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAlerts"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:backgroundTint="#546E7A"
+            android:contentDescription="Pause or resume hazard alerts"
+            android:text="Alerts: ON (tap to pause)"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
